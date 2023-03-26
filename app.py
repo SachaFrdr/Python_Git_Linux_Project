@@ -78,5 +78,5 @@ app.layout = html.Div([
 
 # Launch dash application
 if __name__ == '__main__':
-    app.run_server(debug = True, host='15.237.28.115')
+    app.run_server(debug = True, host='0.0.0.0')
 
