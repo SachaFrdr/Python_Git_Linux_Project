@@ -41,6 +41,14 @@ def update_ticker_graph(ticker, n):
     return fig
 
 
+data_high_low = pd.DataFrame({
+    "Type": ["High", "Low", "High", "Low"],
+    "Value": [6.32000, 0.01999, 0.73157, 0.00001],
+    "Crypto": ["MAGIC", "MAGIC", "DOGECOIN", "DOGECOIN"]
+})
+fig_high_low = px.bar(df, x="Type", y="Value", color="Crypto", barmode="group")
+
+
 #On utilise un callback pour les mises à jour automatiques
 @app.callback(
     dash.dependencies.Output("update-time", "children"),
@@ -78,6 +86,11 @@ app.layout = html.Div([
         html.Div("MAGIC Converter : 1 MAGIC = $1.46", style={'textAlign': 'justify', 'color' : 'black', 'fontSize': 18}),
         
         html.Div("DOGE Converter : 1 DOGE = $0.074644", style={'textAlign': 'justify', 'color' : 'black', 'fontSize': 18}),
+        
+        dcc.Graph(
+            id='high_low-graph',
+            figure=fig_high_low
+        ),
         
         html.Div(style={'textAlign': 'right', 'color' : 'blue'},
             id="update-time")
