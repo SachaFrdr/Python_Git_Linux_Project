@@ -42,12 +42,20 @@ def update_ticker_graph(ticker, n):
     return fig
 
 
-data_high_low = pd.DataFrame({
-    "Type": ["High", "Low", "High", "Low"],
-    "Value": [6.32000, 0.01999, 0.73157, 0.00001],
-    "Crypto": ["MAGIC", "MAGIC", "DOGECOIN", "DOGECOIN"]
+data_high = pd.DataFrame({
+    "Type": ["High", "High"],
+    "Value": [6.32000, 0.73157],
+    "Crypto": ["MAGIC", "DOGECOIN"]
 })
-fig_high_low = px.bar(data_high_low, x="Type", y="Value", color="Crypto", barmode="group")
+fig_high = px.bar(data_high, x="Type", y="Value", color="Crypto", barmode="group")
+
+
+data_low = pd.DataFrame({
+    "Type": ["Low", "Low"],
+    "Value": [0.01999, 0.00001],
+    "Crypto": ["MAGIC", "DOGECOIN"]
+})
+fig_low = px.bar(data_low, x="Type", y="Value", color="Crypto", barmode="group")
 
 
 #On utilise un callback pour les mises à jour automatiques
@@ -90,7 +98,12 @@ app.layout = html.Div([
         
         dcc.Graph(
             id='high_low-graph',
-            figure=fig_high_low
+            figure=fig_high
+        ),
+        
+        dcc.Graph(
+            id='high_low-graph',
+            figure=fig_low
         ),
         
         html.Div(style={'textAlign': 'right', 'color' : 'blue'},
