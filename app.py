@@ -30,7 +30,7 @@ def update_ticker_graph(ticker, n):
         data = data_dogecoin
     
     fig = {
-        "data": [{"x": data["Date"], "y": data["Close"], "type": "line", "line": {"color": "red"}}],
+        "data": [{"x": data["Date"], "y": data["Close"], "type": "line", "line": {"color": "blue"}}],
         "layout": {"title": f"Graphic for ({ticker})", "fontSize" : 20}
     }
     
@@ -65,13 +65,13 @@ app.layout = html.Div([
             id="ticker-graph"
         ),
         
-        html.Div("Magic", style={'textAlign': 'justify', 'color' : 'black', 'fontSize': 20}
+        html.Div("MAGIC is the native token of Treasure. Treasure is the decentralized video game console connecting games and communities together through imagination, MAGIC, and NFTs.", style={'textAlign': 'justify', 'color' : 'black', 'fontSize': 20}
         ),
 
-        html.Div("Dogecoin", style={'textAlign': 'justify', 'color' : 'black', 'fontSize': 20}
+        html.Div("Dogecoin is a cryptocurrency that was created on December 6th, 2013 based on the popular Doge Internet meme and features a Shiba Inu on its logo. The codebase of the project was a fork of Litecoin, in which most of the same features such hash hashing algorithm were inherited, with the only difference of branding and large inflationary supply. You may buy Dogecoin on centralized exchanges such as Binance, Crypto.com, Coinbase, Bitfinex, and more.", style={'textAlign': 'justify', 'color' : 'black', 'fontSize': 20}
         ),
         
-        html.Div(style={'textAlign': 'right', 'color' : 'red'},
+        html.Div(style={'textAlign': 'right', 'color' : 'blue'},
             id="update-time")
     ])
 ])
