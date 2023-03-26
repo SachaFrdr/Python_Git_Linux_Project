@@ -43,19 +43,19 @@ def update_ticker_graph(ticker, n):
 
 
 data_high = pd.DataFrame({
-    "Type": ["High", "High"],
+    "Highest historical values of the MAGIC and the DOGECOIN": ["MAGIC   -   DOGECOIN", "MAGIC   -   DOGECOIN"],
     "Value": [6.32000, 0.73157],
     "Crypto": ["MAGIC", "DOGECOIN"]
 })
-fig_high = px.bar(data_high, x="Type", y="Value", color="Crypto", barmode="group")
+fig_high = px.bar(data_high, x="Highest historical values of the MAGIC and the DOGECOIN", y="Value", color="Crypto", barmode="group")
 
 
 data_low = pd.DataFrame({
-    "Type": ["Low", "Low"],
+    "Lowest historical values of the MAGIC and the DOGECOIN": ["MAGIC   -   DOGECOIN", "MAGIC   -   DOGECOIN"],
     "Value": [0.01999, 0.00001],
     "Crypto": ["MAGIC", "DOGECOIN"]
 })
-fig_low = px.bar(data_low, x="Type", y="Value", color="Crypto", barmode="group")
+fig_low = px.bar(data_low, x="Lowest historical values of the MAGIC and the DOGECOIN", y="Value", color="Crypto", barmode="group")
 
 
 #On utilise un callback pour les mises à jour automatiques
