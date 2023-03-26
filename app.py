@@ -47,7 +47,7 @@ data_high_low = pd.DataFrame({
     "Value": [6.32000, 0.01999, 0.73157, 0.00001],
     "Crypto": ["MAGIC", "MAGIC", "DOGECOIN", "DOGECOIN"]
 })
-fig_high_low = px.bar(df, x="Type", y="Value", color="Crypto", barmode="group")
+fig_high_low = px.bar(data_high_low, x="Type", y="Value", color="Crypto", barmode="group")
 
 
 #On utilise un callback pour les mises à jour automatiques
