@@ -43,12 +43,12 @@ def update_ticker_graph(ticker, n):
 
 
 data_high = pd.DataFrame({
-    "Highest values of MAGIC and DOGECOIN": ["MAGIC", "DOGECOIN", "MAGIC", "DOGECOIN"],
-    "Value": [6.32000, 0.73157, 6.32000, 0.73157],
-    "Extrem": ["MAGIC", "DOGECOIN", "MAGIC", "DOGECOIN"]
+    "Highest values of MAGIC and DOGECOIN": ["MAGIC", "DOGECOIN"],
+    "Value": [6.32000, 0.73157],
+    "Extrem": ["MAGIC", "DOGECOIN"]
 })
-fig_high = px.bar(data_high, x="Highest values of MAGIC and DOGECOIN", y="Value", color="Extrem", barmode="group")
-
+fig_high = px.bar(data_high, x="Highest values of MAGIC and DOGECOIN", y="Value", color="Extrem")
+#barmode="group"
 
 #On utilise un callback pour les mises à jour automatiques
 @app.callback(
