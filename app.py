@@ -93,11 +93,6 @@ app.layout = html.Div([
             figure=fig_high
         ),
         
-        dcc.Graph(
-            id='high_low-graph',
-            figure=fig_low
-        ),
-        
         html.Div(style={'textAlign': 'right', 'color' : 'blue'},
             id="update-time")
     ])
