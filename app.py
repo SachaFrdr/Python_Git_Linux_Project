@@ -43,7 +43,7 @@ def update_ticker_graph(ticker, n):
 )
 
 def update_time(n):
-    return f"Mis à jour à: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+    return f"Dernière mise à jour : {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
 
 # Manage automatic updates
 app.layout = html.Div([
