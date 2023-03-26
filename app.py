@@ -3,6 +3,7 @@ from dash import dcc
 from dash import html
 import datetime
 import pandas as pd
+import plotly.express as px
 
 
 #Sur le dashboard, on utilise les cryptomonnaies Magic et Dogecoin.
